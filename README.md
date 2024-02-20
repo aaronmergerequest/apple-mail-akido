@@ -1,4 +1,4 @@
-WHAT IS MAIL Aikido?
+WHAT IS MAIL AIKIDO?
 
 Mail Aikido is a bundle of AppleScripts and instructions that you can use to add keyboard shortcuts for moving messages to folders in Apple Mail.
 
