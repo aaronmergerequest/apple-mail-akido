@@ -1,0 +1,24 @@
+(* Mail Aikido 1.0 Script 1 of 2 *)
+(* Move messages into selected folders *)
+
+(* Step 1: Change "mail account name in quotes" to match the human-readable name for the mail account that you want to copy mail into *) 
+
+(* Example myaccount name might be "GMail" or "Work" *)
+
+(* Step 2: Change "target folder in quotes" to match the path and folder you would like to copy mail into *)
+
+(* If your target folder is on the top level of your account, you only need to enter the folder name eg: "Newsletters" *)
+
+(* If your target folder is nested, use forward slashes to traverse the hierarchy eg: "Receipts/2024" *)
+
+tell application "Mail"
+
+  set myaccount to "mail account name in quotes"
+  set theMessages to selection
+
+  repeat with eachMessage in theMessages
+copy eachMessage to mailbox "target folder" of account myaccount
+delete eachMessage
+  end repeat
+
+end tell

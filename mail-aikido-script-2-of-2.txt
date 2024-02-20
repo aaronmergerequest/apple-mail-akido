@@ -1,0 +1,8 @@
+(* Mail Aikido 1.0 Script 2 of 2 *)
+(* Select first message in current view *)
+
+tell application "System Events"
+	tell process "Mail"
+		select row 1 of table 1 of scroll area 1 of splitter group 1 of splitter group 1 of window 1
+	end tell
+end tell
