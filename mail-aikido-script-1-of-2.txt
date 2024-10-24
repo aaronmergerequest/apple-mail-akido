@@ -1,4 +1,4 @@
-(* Mail Aikido 1.0 Script 1 of 2 *)
+(* Mail Aikido 1.1 Script 1 of 2 *)
 (* Move messages into selected folders *)
 
 (* Step 1: Change "mail account name in quotes" to match the human-readable name for the mail account that you want to copy mail into *) 
