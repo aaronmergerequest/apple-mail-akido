@@ -1,12 +1,20 @@
-(* Mail Aikido 1.1 Script 2 of 2 *)
+(* Mail Aikido 1.2 Script 2 of 2 *)
 (* Count messages in inbox. *)
 (* If >0, then select first message in current view *)
 
 tell application "System Events"
 	tell process "Mail"
-		set rowCount to (count every row of table 1 of scroll area 1 of splitter group 1 of splitter group 1 of window 1)
-		if rowCount > 0 then
-			select row 1 of table 1 of scroll area 1 of splitter group 1 of splitter group 1 of window 1
-		end if
+		try
+			(* Get the frontmost window *)
+			(* This handles situations where more than one viewer window is open *)
+			set frontWindow to front window
+			set rowCount to (count every row of table 1 of scroll area 1 of splitter group 1 of splitter group 1 of frontWindow)
+			if rowCount > 0 then
+				select row 1 of table 1 of scroll area 1 of splitter group 1 of splitter group 1 of frontWindow
+			end if
+		on error errMsg number errNum
+			(* Silently handle the error if the window structure doesn't match *)
+			(* e.g., if a compose window is frontmost instead of a viewer *)
+		end try
 	end tell
 end tell
