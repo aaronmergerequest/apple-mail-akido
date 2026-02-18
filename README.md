@@ -100,4 +100,4 @@ Mail Aikido has been tested and confirmed to be working with:
 
 Given the toolkit, Mail Aikido is hypothetically compatible with every Apple OS since OS X. As users confirm compatibility it will be added to the list above.
 
-![alt text](https://github.com/aaronmergerequest/apple-mail-aikido/blob/main/apple-mail-aikido-1.0.png?raw=true)
+![Mail Akido Icon](https://github.com/aaronmergerequest/apple-mail-akido/blob/main/apple-mail-aikido-1.0.png)
